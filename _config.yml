@@ -7,13 +7,13 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Lehong Wang"
+title                    : "Home"
 title_separator          : "-"
-name                     : &name "Lehong Wang"
-description              : &description "Undergrad at WPI (Worcester Polytechnic Instituite)"
-url                      : https://lehong-wang.github.io/ # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+name                     : &name "Yifu Yuan"
+description              : &description "personal description"
+url                      : https://yifuyuan.github.io/ # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "lehong-wang.github.io"
+repository               : "yifuyuan.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
@@ -80,14 +80,14 @@ analytics:
 
 # Site Author
 author:
-  name             : "Lehong Wang"
-  avatar           : "profile.png"
-  bio              : "Undergrad at WPI (Worcester Polytechnic Instituite)"
-  location         : "Massachusetts, US"
+  name             : "Yifu Yuan"
+  avatar           : "profile.jpeg"
+  bio              : "M.S. in Robotics Systems Development @ CMU<br>B.S. in Robotics & CS @ WPI"
+  location         : "Pittsburgh, PA"
   employer         :
   pubmed           :
   googlescholar    : 
-  email            : "lwang11@wpi.edu"
+  email            : "martinyyf0079@gmail.com"
   researchgate     :  
   uri              :
   bitbucket        :
@@ -96,13 +96,13 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "lehong-wang"
+  github           : "YifuYuan"
   google_plus      :
   keybase          :
   instagram        :
   impactstory      :
   lastfm           :
-  linkedin         :
+  linkedin         : "yifu-yuan-331116200"
   orcid            :
   pinterest        :
   soundcloud       :
