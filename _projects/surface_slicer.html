@@ -1,0 +1,256 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Surface_Slicer</title>
+    <link rel="stylesheet" href="../assets/css/projects.css" />
+</head>
+
+<body>
+    <div id="main" style="padding-bottom:1em; padding-top: 5em; width: 60em; max-width: 70em; margin-left: auto; margin-right: auto;">
+        <section>
+            
+            <h1 style="text-align: center; margin-bottom: 0; color: #4e79a7; font-size: 300%"> Surface Slicer </h1>
+            <h2 style="text-align: center; white-space: nowrap; font-size: 200%"> Software Tool for Planning Circuit <br> for Aersol Jet Additive Manufacturing </h2>
+
+
+            <div style="text-align: center;">
+                <img src="../images/surface_slicer_intro.png" alt="Image Description" style="width: 100%;">
+            </div>
+
+            <p>
+                The Aerosol Jet Additive Manufacturing technology allows for precise deposition of different materials in a three-dimensional space. 
+                An application of this technology is the printing of integrated circuits onto the surface of three-dimensional objects.
+                However, the existing methods for creating 3D circuits generally require the manual design of circuit traces using computer-aided design (CAD) software. 
+                This process is laborious and impedes the quick development of prototypes. 
+                The objective of this project is to develop software capable of efficiently converting pre-existing 2D PCB designs onto a corresponding 3D object. 
+                The software is capable of determining the transformation between a 2D PCB design and a desired 3D surface, and generating waypoints or motions for printing. 
+                We showcase the software's robustness and adaptability through a range of circuit design demos.
+                <br>* Since this work is still under active development, source code is not publicly available.
+            </p>
+
+
+
+
+            <!-- ########## Method ########## -->
+            <hr style="margin-top: 0em;">
+
+
+            <h3>Method</h3>
+
+            <div class="box alt" style="margin-bottom: 1em;">
+                <div class="row 50% uniform" style="width: 100%;">
+                    <div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 25%">
+                        <span class="image fit" style="margin-bottom: 0.5em;">
+                            <img src="../images/surface_slicer_method_circuit.png" alt="" />
+                        </span>
+                        A. The input PCB design (in gerber format) is parsed into 2D printing trajectory as waypoints.
+
+                    </div>
+                    <div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 25%">
+                        <span class="image fit" style="margin-bottom: 0.5em;">
+                            <img src="../images/surface_slicer_method_mapping.png" alt="" />
+                        </span>
+                        B. The input 3D surface (in stl format) analyzed and a transformation to 2D is calculated.
+
+                    </div>
+                    <div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 25%">
+                        <span class="image fit" style="margin-bottom: 0.5em;">
+                            <img src="../images/surface_slicer_method_2to3.gif" alt="" />
+                        </span>
+                        C. The 2D circuit waypoints is layed onto the 2D surface, and the inverse transformation is applied to bring the circuit waypoints to 3D. 
+
+                    </div>
+                    <div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 25%">
+                        <span class="image fit" style="margin-bottom: 0.5em;">
+                            <img src="../images/surface_slicer_method_motion.png" alt="" />
+						</span>
+                        D. The 3D waypoints is analyzed and printing motion for the Aersol Jet machine is calculated.
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <!-- ########## Demo 1 ########## -->
+            <hr style="margin-top: 0em;">
+
+
+            <h3>Sensor Circuit on Hand</h3>
+
+            <div style="display: flex;">
+
+                <div style="flex: 2.5; padding: 10px; text-align: center;">
+                    <span class="image fit" style="margin-bottom: 0.5em;">
+                        Hand Model
+                        <img src="../images/surface_slicer_hand_model.png" alt="">
+                    </span>
+                    <span class="image fit" style="margin-bottom: 0.5em;">
+                        Sensor Circuit
+                        <img src="../images/surface_slicer_hand_circuit.png" alt="">
+                    </span>
+                </div>
+            
+                <div style="flex: 7.5; padding: 10px; text-align: center;">
+                    Animation of Circuit Printing on Hand
+                    <span class="image fit" style="margin-bottom: 0.5em;">
+                        <video controls autoplay loop muted playsinline style="width: 100%;">
+                            <source src="../images/surface_slicer_hand_video.mov" type="video/mp4">
+                        </video>
+                    </span>
+                </div>
+            
+            </div>
+
+
+            <!-- ########## Demo 2 ########## -->
+            <hr style="margin-top: 0em;">
+
+
+            <h3>Blinker Circuit on Mechnical Part</h3>
+
+            <div style="display: flex;">
+
+                <div style="flex: 2.2; padding: 10px; text-align: center;">
+                    <span class="image fit" style="margin-bottom: 0.5em;">
+                        Part Model
+                        <img src="../images/surface_slicer_part_model.png" alt="">
+                    </span>
+                    <span class="image fit" style="margin-bottom: 0.5em;">
+                        Blinker Circuit
+                        <img src="../images/surface_slicer_part_circuit.png" alt="">
+                    </span>
+                </div>
+            
+                <div style="flex: 5; padding: 10px; text-align: center;">
+                    Animation of Circuit Printing on Part
+                    <span class="image fit" style="margin-bottom: 0.5em;">
+                        <video controls autoplay loop muted playsinline style="width: 100%;">
+                            <source src="../images/surface_slicer_part_video.mp4" type="video/mp4"> 
+                        </video>
+                    </span>
+                </div>
+
+                <div style="flex: 2.8; padding: 10px; text-align: center;">
+                    Animation of Printing
+                    <span class="image fit" style="margin-bottom: 0.5em;">
+                        <video controls autoplay loop muted playsinline style="width: 100%;">
+                            <source src="../images/surface_slicer_part_motion.mov" type="video/mp4"> 
+                        </video>
+                    </span>
+                </div>
+            
+            </div>
+
+
+
+            <!-- ########## Demo 3 ########## -->
+            <hr style="margin-top: 0em;">
+
+
+            <h3>Printing the Continents on a Globe</h3>
+
+            <div style="display: flex;">
+
+                <div style="flex: 3; padding: 10px; text-align: center;">
+                    <span class="image fit" style="margin-bottom: 0.5em;">
+                        Continents Outline
+                        <img src="../images/surface_slicer_globe_pattern.png" alt="">
+                    </span>
+                    <span class="image fit" style="margin-bottom: 0.5em;">
+                        Mapped to a Globe
+                        <img src="../images/surface_slicer_globe_mapped.png" alt="">
+                    </span>
+                </div>
+            
+                <div style="flex: 7; padding: 10px; text-align: center;">
+                    Animation of Printing on Globe
+                    <span class="image fit" style="margin-bottom: 0.5em;">
+                        <video controls autoplay loop muted playsinline style="width: 100%;">
+                            <source src="../images/surface_slicer_globe_video.mp4" type="video/mp4">
+                        </video>
+                    </span>
+                </div>
+            
+            </div>
+
+
+
+
+            <!-- ########## Video ########## -->
+            <hr style="margin-top: 0em;">
+
+
+            <h3>Project Presentation</h3>
+
+            <iframe width="560" height="315" 
+                src="https://www.youtube.com/embed/SkzZEGj5ZAs?si=QLmIW2hWO3l9w9s7" 
+                title="YouTube video player" frameborder="0" 
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+            </iframe>
+
+
+
+
+            <!-- ########## Acknowledgements and Contact ########## -->
+
+
+            <hr style="margin-top: 0em;">
+
+            <h3>Acknowledgements</h3>
+            <p>
+                This work is supported by Biorobotics Lab at Carnegie Mellon University.
+            </p>
+
+
+<!-- 
+            <div class="box alt" style="margin-bottom: 1em;">
+                <div class="row 0% uniform" style="width: 100%; display: flex; justify-content: space-between;">
+                    <div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 20%">
+                        <span class="image fit" style="margin-bottom: 0.5em; margin-top: 0.3em">
+										<img src="../images/github_logo.svg" alt=""/>
+									</span>
+                    </div>
+                    <div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 20%">
+                        <span class="image fit" style="margin-bottom: 0.5em;">
+										<img src="../images/github_logo.svg" alt=""/>
+									</span>
+                    </div>
+                    <div class="2u" style="font-size: 1em; line-height: 1.5em; text-align: center; width: 20%">
+                        <span class="image fit" style="margin-bottom: 0.5em; margin-top: 0.3em">
+										<img src="../images/github_logo.svg" alt=""/>
+									</span>
+                    </div>
+                </div>
+            </div> -->
+
+
+
+            <hr style="margin-top: 1em">
+            <h3>Contact</h3>
+            <p>If you have any questions, please feel free to contact <a href="http://lehong-wang.github.io/">Lehong Wang</a></p>
+            <hr/>
+
+
+
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+    </div>
+</body>
+
+</html>
