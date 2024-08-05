@@ -14,9 +14,9 @@ My recent research focuses on a comprehensive control framework to achieve perce
 My ultimate goal is to propel the advancement of general-purpose humanoid robots, increasing its adaptability to dynamic settings to assist humans. 
 
 
-High Lighted Projects
+<!-- High Lighted Projects
 =====
 
 ### (BIQU)
 ### (HURON)
-### (portable EEG Device)
+### (portable EEG Device) -->
